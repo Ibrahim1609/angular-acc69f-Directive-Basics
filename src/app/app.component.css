@@ -1,0 +1,107 @@
+/* Directive card example */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+.card {
+  width: 370px;
+  border-radius: 30px;
+}
+
+.container-fluid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: monospace;
+  color: rgb(75, 138, 255);
+}
+
+h5 {
+  color: rgb(6, 78, 126);
+  font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.navBar {
+  background: #ffdb4a;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navBar p {
+  margin-top: 10px;
+  font-size: 30px;
+  position: relative;
+  color: seagreen;
+  font-weight: 700;
+}
+button {
+  margin: 1em;
+  width: 90px;
+  padding: 8px;
+  border: 1px solid rgb(216, 216, 216);
+  color: rgb(255, 255, 255);
+  background-color: rgba(14, 14, 14, 0.74);
+}
+button:hover {
+  background-color: rgb(175, 51, 2);
+  color: rgb(255, 203, 92);
+  border-radius: 5px;
+}
+img {
+  width: 320px;
+  height: 200px;
+  border-radius: 12px;
+  padding: 5px;
+}
+
+img:hover {
+  padding: 0px;
+  cursor: pointer;
+}
+.cardHead1 {
+  color: #ffdb4a;
+  font-family: monospace;
+  font-size: 20px;
+}
+.cardHead2 {
+  color: #ffdb4a;
+  font-family: monospace;
+  font-size: 20px;
+}
+.cardHead3 {
+  color: #ffdb4a;
+  font-family: monospace;
+  font-size: 20px;
+}
+.cardHead4 {
+  color: #ffdb4a;
+  font-family: monospace;
+  font-size: 20px;
+}
+.cardHead5 {
+  color: #ffdb4a;
+  font-family: monospace;
+  font-size: 20px;
+}
+.foot{
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* media query */
+@media screen and(max-width:450px) {
+  .card {
+    width: 300px;
+    border-radius: 30px;
+  }
+  img {
+    width: auto;
+  }
+}

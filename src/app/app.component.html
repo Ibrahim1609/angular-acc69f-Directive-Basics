@@ -1,0 +1,61 @@
+<div class="navBar">
+  <p>Today's Special Show</p>
+</div>
+<div class="container-fluid mt-5" *ngIf="cardData; else noDataFound">
+  <div *ngFor="let card of cardData; let i = index">
+    <div
+      class="card text-center m-3"
+      (mouseover)="onMouseOver(i)"
+      (mouseout)="onMouseOut()"
+      [ngStyle]="{
+        'background-color': i === hoverIndex ? card.color : '',
+        'border-width': '2px'
+      }"
+    >
+      <div
+        class="card-header"
+        [ngClass]="{
+          cardHead1: card.title == 'Avengers',
+          cardHead2: card.title == 'Babys Day out',
+          cardHead3: card.title == 'Conjuring',
+          cardHead4: card.title == 'Titanic',
+          cardHead4: card.title == 'Angry Birds'
+        }"
+      >
+        {{ card.name }}
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{ card.title }}</h5>
+        <p class="card-text">
+          {{ card.content }}
+          <img src="{{ card.img }}" alt="" />
+        </p>
+        <div [ngSwitch]="card.rating">
+          <div *ngSwitchCase="8">
+            <p style="font-style: italic;">Ratings : {{ card.rating }}</p>
+          </div>
+          <div *ngSwitchCase="9">
+            <p style="font-style: italic;">Ratings : {{ card.rating }}</p>
+          </div>
+          <div *ngSwitchCase="6.8">
+            <p style="font-style: italic;">Ratings : {{ card.rating }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-muted">
+        {{ card.note }}
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="foot">
+  <span>The Angry Birds Show is No vacants click to Hide it.! </span>
+  <button (click)="hide($event)">Hide It!</button>
+</div>
+<div class="error">
+  <ng-template #noDataFound class="img">
+    <img [src]="notFound" alt="sample image.!" />
+    <p>No Data is Found.!</p>
+  </ng-template>
+</div>
